@@ -1,0 +1,9 @@
+server {
+    listen 80;
+    server_name 13.76.99.126;
+
+location / {
+  include proxy_params;
+  proxy_pass http://unix:/home/Isaac/ncov-web-api/app.sock;
+    }
+}
